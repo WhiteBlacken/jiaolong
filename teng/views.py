@@ -240,6 +240,9 @@ def suppliers_with_business(request, id):
                 suppliers.append(list)
     context = getCommomPageData(request, suppliers)
     context['nowBusiness'] = nowBusiness
+    # 填充热门推荐栏，需要热门（二级）8个，以及对应热门供应商3个
+    supplierSearchTopNSubCate = findSupplierSearchTopNSubCate(8)
+    context['supplierSearchTopNSubCate'] = supplierSearchTopNSubCate
     return render(request, 'teng/cateOneSearchResult.html', {'context': context})
 
 
@@ -253,6 +256,9 @@ def suppliers_with_subbusiness(request, id):
     context = getCommomPageData(request, suppliers)
     context['nowBusiness'] = nowBusiness
     context['nowSubbusiness'] = nowSubbusiness
+    # 填充热门推荐栏，需要热门（二级）8个，以及对应热门供应商3个
+    supplierSearchTopNSubCate = findSupplierSearchTopNSubCate(8)
+    context['supplierSearchTopNSubCate'] = supplierSearchTopNSubCate
     return render(request, 'teng/cateTwoSearchResult.html', {'context': context})
 
 
@@ -291,6 +297,9 @@ def search_by_keyword(request):
     # context['businessId'] = businessId
     context['paginator'] = paginator
     context['page_data'] = page_data
+    # 填充热门推荐栏，需要热门（二级）8个，以及对应热门供应商3个
+    supplierSearchTopNSubCate = findSupplierSearchTopNSubCate(8)
+    context['supplierSearchTopNSubCate'] = supplierSearchTopNSubCate
     return render(request, 'teng/keywordSearchResult.html',
                   {'context': context})
 
