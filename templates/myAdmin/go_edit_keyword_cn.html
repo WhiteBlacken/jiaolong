@@ -1,0 +1,84 @@
+{% extends 'myAdmin/base.html' %}
+{% block main %}
+<div class="tpl-portlet-components">
+    <div class="portlet-title">
+        <div class="caption font-green bold">
+            <span class="am-icon-code"></span> 关键词表中文-编辑
+        </div>
+
+    </div>
+    <div class="tpl-block">
+       <form class="form-horizontal" role="form" method="post" action="{% url 'update_keyword' %}">
+       {% csrf_token %}
+            <input name="id" value="{{ context.keyword.id }}" type="hidden"/>
+          <div class="form-group">
+            <label for="firstname" class="col-sm-2 control-label">中文关键词</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="keyword_cn" value="{{ context.keyword.chinese_keyword }}" placeholder="请输入中文关键词">
+            </div>
+          </div>
+
+        <!--主关键词不允许更改-->
+           <div class="form-group">
+            <label for="firstname" class="col-sm-2 control-label">主关键词</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="mainKeyword" value="{{ context.keyword.keyword }}" placeholder="请输入主关键词">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="lastname" class="col-sm-2 control-label">评论</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="comment" value="{{ context.keyword.comment }}" placeholder="评论">
+            </div>
+          </div>
+
+           <div class="form-group">
+            <label for="firstname" class="col-sm-2 control-label">所属二级行业</label>
+               <div class="col-sm-2">
+                  <select name="subbus" class="form-control">
+                      {% for cate in context.allCate %}
+                          {% if cate == context.keyword.subbusiness %}
+                            <option value ="{{ cate.id }}" selected="selected">{{ cate }}</option>
+                          {% else %}
+                            <option value ="{{ cate.id }}">{{ cate }}</option>
+                          {% endif %}
+                        {% endfor %}
+                  </select>
+                </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-default">提交</button>
+                <a href="{% url 'unsave_keyword_cn' %}"  class="btn btn-default">放弃</a>
+            </div>
+          </div>
+
+        </form>
+    <div>
+        <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br> <br>
+     <br>
+     <br> <br>
+     <br>
+     <br>
+     <br> <br> <br>
+    </div>
+
+
+
+
+    </div>
+{#    <div class="tpl-alert"></div>#}
+</div>
+{% endblock %}

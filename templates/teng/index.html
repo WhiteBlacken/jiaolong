@@ -1,0 +1,988 @@
+﻿{% extends 'teng/base_index.html' %}
+{% block main %}
+{% load static %}
+<!-- MAIN -->
+<div id="main" class="theme-clearfix" role="document">
+    <div class="breadcrumbs theme-clearfix">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li class="active">
+                    <span>Home</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div id="contents" role="main" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="single post-6 page type-page status-publish hentry">
+                    <div class="entry">
+                        <div class="entry-content">
+                            <div class="entry-content">
+                                <div class="vc_row wpb_row vc_row-fluid main-slider-custom">
+                                    <div class="wpb_column vc_column_container vc_col-sm-3 vc_col-lg-3 vc_col-md-4 vc_hidden-sm vc_col-xs-1 vc_hidden-xs">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-9 vc_col-md-8 vc_col-xs-12">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
+                                                <div class="vc_row wpb_row vc_inner vc_row-fluid margin-bottom-10">
+                                                    <!-- OWL SLIDER -->
+                                                    <div class="sliderevo1 wpb_column vc_column_container vc_col-sm-8 vc_col-lg-8 vc_col-md-12">
+                                                        <div class="vc_column-inner">
+                                                            <div class="wpb_wrapper">
+                                                                <div class="wpb_revslider_element wpb_content_element">
+                                                                    <div id="main-slider" class="fullwidthbanner-container" style="margin: 0px auto; padding: 0px; max-width: 612px; background-color: transparent;">
+                                                                        <div class="module slideshow no-margin">
+                                                                            <div class="item">
+                                                                                <a href="home_style_1_shop_product_default.html"><img src="{% static 'images/micro.png' %}" alt="slider1" class="img-responsive" /></a>
+                                                                            </div>
+                                                                            <div class="item">
+                                                                                <a href="home_style_1_shop_product_default.html"><img src="{% static 'images/micro.png' %}" alt="slider2" class="img-responsive" /></a>
+                                                                            </div>
+                                                                            <div class="item">
+                                                                                <a href="home_style_1_shop_product_default.html"><img src="{% static 'images/micro.png' %}" alt="slider3" class="img-responsive" /></a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="loadeding"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- OWL LIGHT SLIDER -->
+
+                                                    <!-- DAILY DEALS -->
+                                                    <div class="dailydeal wpb_column vc_column_container vc_col-sm-4 vc_col-lg-4 vc_col-md-12 vc_col-xs-12">
+                                                        <div class="vc_column-inner">
+                                                            <div class="wpb_wrapper">
+                                                                <div id="electronic_sw-count-down_01" class="sw-woo-container-slider responsive-slider countdown-slider" data-lg="1" data-md="2" data-sm="1" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false" data-dots="true" data-circle="false">
+                                                                    <div class="resp-slider-container">
+{#                                                                        <div class="box-slider-title"></div>#}
+
+                                                                        <div class="slider-wrapper clearfix">
+                                                                            <div class="slider responsive">
+                                                                                <!-- begin 右边滑动栏 暂时没想好做啥-->
+                                                                                {% for supplier in context.topNCreditSupplier %}
+                                                                                <div class="item item-countdown" id="product_sw-count-down_01">
+                                                                                    <div class="item-wrap">
+                                                                                        <div class="item-detail">
+                                                                                            <div class="item-image-countdown products-thumb">
+{#                                                                                                <span class="onsale">Sale!</span>#}
+
+                                                                                                <a href="home_style_1_shop_product_default.html">
+                                                                                                    <div class="product-thumb-hover">
+                                                                                                        <!--作尺寸参考-->
+{#                                                                                                        <img 	width="300" height="300" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="12"#}
+{#                                                                                                                src="{% static 'images/12-300x300.jpg' %}"#}
+{#                                                                                                                srcset="{% static 'images/12-300x300.jpg' %} 300w, {% static 'images/12-260x260.jpg' %} 260w, {% static 'images/12.jpg' %} 600w, {% static 'images/12-180x180.jpg' %} 180w"#}
+{#                                                                                                                sizes="(max-width: 300px) 100vw, 300px" />#}
+                                                                                                        <img 	width="300" height="300" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="12"#}
+                                                                                                                src="{% static 'images/micro.png' %}"
+                                                                                                                srcset="{% static 'images/micro.png' %} 300w, {% static 'images/micro.png' %} 260w, {% static 'images/micro.png' %} 600w, {% static 'images/micro.png' %} 180w"
+                                                                                                                sizes="(max-width: 300px) 100vw, 300px" />
+                                                                                                    </div>
+                                                                                                </a>
+
+                                                                                                <div 	class="product-countdown" data-date="1527724800000" data-price="$440" data-starttime="1458172800"
+                                                                                                        data-cdtime="1508371200" data-id="product_sw-count-down_01">
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                            <div class="item-content">
+                                                                                                <!-- rating  -->
+                                                                                                <div class="reviews-content">
+                                                                                                    <div class="star"></div>
+                                                                                                    <div class="item-number-rating"></div>
+                                                                                                </div>
+                                                                                                <!-- end rating  -->
+
+                                                                                                <h4>
+                                                                                                    <a href="home_style_1_shop_product_default.html" title="Dolore turkey">{{ supplier.name_cn }}</a>
+                                                                                                </h4>
+
+                                                                                                <div class="item-price">
+                                                                                                    <span>
+{#                                                                                                        <del>#}
+{#                                                                                                            <span class="woocommerce-Price-amount amount">#}
+{#                                                                                                                <span class="woocommerce-Price-currencySymbol">$</span>440.00#}
+{#                                                                                                            </span>#}
+{#                                                                                                        </del>#}
+
+                                                                                                        <ins>
+                                                                                                            <span class="woocommerce-Price-amount amount">
+                                                                                                                <span class="woocommerce-Price-currencySymbol">信誉评分： {{ supplier.credit }}</span>
+                                                                                                            </span>
+                                                                                                        </ins>
+                                                                                                    </span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                {% endfor %}
+
+                                                                                <!-- end 右边滑动栏 -->
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="vc_row wpb_row vc_inner vc_row-fluid no-margin-bottom">
+                                                    <div class="home1img1 home1img wpb_column vc_column_container vc_col-sm-4">
+                                                        <div class="vc_column-inner padding-right-5">
+                                                            <div class="wpb_wrapper">
+                                                                <div class="wpb_single_image wpb_content_element vc_align_center">
+                                                                    <figure class="wpb_wrapper vc_figure">
+                                                                        <a href="home_style_1_shop_product_default.html" target="_self" class="vc_single_image-wrapper vc_box_border_grey">
+                                                                            <img 	width="301" height="148" class="vc_single_image-img attachment-full" alt="banner-img1"
+                                                                                    src="{% static 'images/banner-img1.jpg' %}"
+                                                                                    srcset="{% static 'images/banner-img1.jpg' %} 301w, {% static 'images/banner-img1-300x148.jpg' %} 300w"
+                                                                                    sizes="(max-width: 301px) 100vw, 301px" />
+                                                                        </a>
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="home1img home1img2 wpb_column vc_column_container vc_col-sm-4 vc_hidden-xs">
+                                                        <div class="vc_column-inner padding-left-5 padding-right-5">
+                                                            <div class="wpb_wrapper">
+                                                                <div class="wpb_single_image wpb_content_element vc_align_center">
+                                                                    <figure class="wpb_wrapper vc_figure">
+                                                                        <a href="home_style_1_shop_product_default.html" target="_self" class="vc_single_image-wrapper vc_box_border_grey">
+                                                                            <img 	width="301" height="148" class="vc_single_image-img attachment-full" alt="banner-img2"
+                                                                                    src="{% static 'images/banner-img2.jpg' %}"
+                                                                                    srcset="{% static 'images/banner-img2.jpg' %} 301w, {% static 'images/banner-img2-300x148.jpg' %} 300w"
+                                                                                    sizes="(max-width: 301px) 100vw, 301px" />
+                                                                        </a>
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="home1img home1img3 wpb_column vc_column_container vc_col-sm-4">
+                                                        <div class="vc_column-inner padding-left-5">
+                                                            <div class="wpb_wrapper">
+                                                                <div class="wpb_single_image wpb_content_element vc_align_center">
+                                                                    <figure class="wpb_wrapper vc_figure">
+                                                                        <a href="home_style_1_shop_product_default.html" target="_self" class="vc_single_image-wrapper vc_box_border_grey">
+                                                                            <img width="248" height="148" src="{% static 'images/banner-img3.jpg' %}" class="vc_single_image-img attachment-full" alt="banner-img3" />
+                                                                        </a>
+                                                                    </figure>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="vc_row wpb_row vc_row-fluid sub-main-slider-custom">
+                                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-3 vc_col-md-4 vc_col-xs-12">
+                                        <div class="vc_column-inner margin-bottom-30">
+                                            <div class="wpb_wrapper">
+                                                <!-- RECOMMEND PRODUCTS -->
+                                                <div class="panel-group accordion_recommend_product" id="accordion">
+                                                    <div class="block-title">
+                                                        <strong>
+                                                            <span>供应商推荐</span>
+                                                        </strong>
+
+                                                        <div class="sn-img icon-bacsic2"></div>
+                                                    </div>
+
+                                                    <!-- ITEMS 左侧供应商推荐 目前静态-->
+                                                    {% for supplier in context.topNVisitSupplier %}
+                                                    <div class="panel panel-default">
+                                                        {% if supplier.num == 1 %}
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ supplier.num }}" class="collapsed">
+                                                        {% else %}
+                                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ supplier.num }}" class="collapsed">
+                                                        {% endif %}
+
+                                                            <span class="item-count">{{ supplier.num }}</span>
+                                                            <h4 class="panel-title">{{ supplier.name_cn }}</h4>
+                                                        </a>
+                                                         {% if supplier.num == 1 %}
+                                                        <div id="collapse{{ supplier.num }}" class="panel-collapse collapse in">
+                                                        {% else %}
+                                                              <div id="collapse{{ supplier.num }}" class="panel-collapse collapse">
+                                                        {% endif %}
+                                                            <div class="panel-body">
+                                                                <div class="item-content">
+                                                                    <div class="item-img item-height">
+                                                                        <div class="item-img-info products-thumb">
+                                                                            <a href="home_style_1_shop_product_default.html" title="Nulla in diam">
+                                                                                <img width="270" height="203" src="{% static 'images/micro.png' %}" class="attachment-thumbnail size-thumbnail wp-post-image" alt="{{ supplier.num }}" title="{{ supplier.num }}" />
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <h4>
+                                                                        <a href="home_style_1_shop_product_default.html" title="Nulla in diam">{{ supplier.name_cn }}</a>
+                                                                    </h4>
+
+                                                                    <!-- rating  -->
+                                                                    <div class="reviews-content">
+                                                                        <div class="star"></div>
+                                                                        <div class="item-number-rating">0 Review(s)</div>
+                                                                    </div>
+                                                                    <!-- end rating  -->
+
+                                                                    <div class="item-price">
+                                                                        <span>
+{#                                                                            <del>#}
+{#                                                                                <span class="woocommerce-Price-amount amount">#}
+{#                                                                                    <span class="woocommerce-Price-currencySymbol">$</span>345.00#}
+{#                                                                                </span>#}
+{#                                                                            </del>#}
+
+                                                                            <ins>
+                                                                                <span class="woocommerce-Price-amount amount">
+                                                                                    <span class="woocommerce-Price-currencySymbol"></span>235.00
+                                                                                </span>
+                                                                            </ins>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    {% endfor %}
+{#                                                    <div class="panel panel-default">#}
+{#                                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="collapsed">#}
+{#                                                            <span class="item-count">2</span>#}
+{#                                                            <h4 class="panel-title">Praesent metus elit</h4>#}
+{#                                                        </a>#}
+{##}
+{#                                                        <div id="collapse2" class="panel-collapse collapse">#}
+{#                                                            <div class="panel-body">#}
+{#                                                                <div class="item-content">#}
+{#                                                                    <div class="item-img item-height">#}
+{#                                                                        <div class="item-img-info products-thumb">#}
+{#                                                                            <a href="home_style_1_shop_product_default.html" title="Praesent metus elit">#}
+{#                                                                                <img width="270" height="203" src="{% static 'images/micro.png' %}" class="attachment-thumbnail size-thumbnail wp-post-image" alt="2" title="2" />#}
+{#                                                                            </a>#}
+{#                                                                        </div>#}
+{#                                                                    </div>#}
+{##}
+{#                                                                    <h4>#}
+{#                                                                        <a href="home_style_1_shop_product_default.html" title="Praesent metus elit">Praesent metus elit</a>#}
+{#                                                                    </h4>#}
+{##}
+{#                                                                    <!-- rating  -->#}
+{#                                                                    <div class="reviews-content">#}
+{#                                                                        <div class="star"></div>#}
+{#                                                                        <div class="item-number-rating">0 Review(s)</div>#}
+{#                                                                    </div>#}
+{#                                                                    <!-- end rating  -->#}
+{##}
+{#                                                                    <div class="item-price">#}
+{#                                                                        <span>#}
+{#                                                                            <span class="woocommerce-Price-amount amount">#}
+{#                                                                                <span class="woocommerce-Price-currencySymbol"></span>280.00#}
+{#                                                                            </span>#}
+{#                                                                        </span>#}
+{#                                                                    </div>#}
+{#                                                                </div>#}
+{#                                                            </div>#}
+{#                                                        </div>#}
+{#                                                    </div>#}
+{##}
+{#                                                    <div class="panel panel-default">#}
+{#                                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="collapsed">#}
+{#                                                            <span class="item-count">3</span>#}
+{#                                                            <h4 class="panel-title">Consectetur placera</h4>#}
+{#                                                        </a>#}
+{##}
+{#                                                        <div id="collapse3" class="panel-collapse collapse">#}
+{#                                                            <div class="panel-body">#}
+{#                                                                <div class="item-content">#}
+{#                                                                    <div class="item-img item-height">#}
+{#                                                                        <div class="item-img-info products-thumb">#}
+{#                                                                            <a href="home_style_1_shop_product_default.html" title="Consectetur placera">#}
+{#                                                                                <img width="270" height="203" src="{% static 'images/micro.png' %}" class="attachment-thumbnail size-thumbnail wp-post-image" alt="4" title="4" />#}
+{#                                                                            </a>#}
+{#                                                                        </div>#}
+{#                                                                    </div>#}
+{##}
+{#                                                                    <h4>#}
+{#                                                                        <a href="home_style_1_shop_product_default.html" title="Consectetur placera">Consectetur placera</a>#}
+{#                                                                    </h4>#}
+{##}
+{#                                                                    <!-- rating  -->#}
+{#                                                                    <div class="reviews-content">#}
+{#                                                                        <div class="star"></div>#}
+{#                                                                        <div class="item-number-rating">0 Review(s)</div>#}
+{#                                                                    </div>#}
+{#                                                                    <!-- end rating  -->#}
+{##}
+{#                                                                    <div class="item-price">#}
+{#                                                                        <span>#}
+{#                                                                            <del>#}
+{#                                                                                <span class="woocommerce-Price-amount amount">#}
+{#                                                                                    <span class="woocommerce-Price-currencySymbol">$</span>350.00#}
+{#                                                                                </span>#}
+{#                                                                            </del>#}
+{##}
+{#                                                                            <ins>#}
+{#                                                                                <span class="woocommerce-Price-amount amount">#}
+{#                                                                                    <span class="woocommerce-Price-currencySymbol"></span>300.00#}
+{#                                                                                </span>#}
+{#                                                                            </ins>#}
+{#                                                                        </span>#}
+{#                                                                    </div>#}
+{#                                                                </div>#}
+{#                                                            </div>#}
+{#                                                        </div>#}
+{#                                                    </div>#}
+{##}
+{#                                                    <div class="panel panel-default">#}
+{#                                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" class="collapsed">#}
+{#                                                            <span class="item-count">4</span>#}
+{#                                                            <h4 class="panel-title">Morbi mollis diam</h4>#}
+{#                                                        </a>#}
+{##}
+{#                                                        <div id="collapse4" class="panel-collapse collapse">#}
+{#                                                            <div class="panel-body">#}
+{#                                                                <div class="item-content">#}
+{#                                                                    <div class="item-img item-height">#}
+{#                                                                        <div class="item-img-info products-thumb">#}
+{#                                                                            <a href="home_style_1_shop_product_default.html" title="Morbi mollis diam">#}
+{#                                                                                <img width="270" height="203" src="{% static 'images/micro.png' %}" class="attachment-thumbnail size-thumbnail wp-post-image" alt="5" title="5" />#}
+{#                                                                            </a>#}
+{#                                                                        </div>#}
+{#                                                                    </div>#}
+{##}
+{#                                                                    <h4>#}
+{#                                                                        <a href="home_style_1_shop_product_default.html" title="Morbi mollis diam">Morbi mollis diam</a>#}
+{#                                                                    </h4>#}
+{##}
+{#                                                                    <!-- rating  -->#}
+{#                                                                    <div class="reviews-content">#}
+{#                                                                        <div class="star"></div>#}
+{#                                                                        <div class="item-number-rating">0 Review(s)</div>#}
+{#                                                                    </div>#}
+{#                                                                    <!-- end rating  -->#}
+{##}
+{#                                                                    <div class="item-price">#}
+{#                                                                        <span>#}
+{#                                                                            <span class="woocommerce-Price-amount amount">#}
+{#                                                                                <span class="woocommerce-Price-currencySymbol">$</span>200.00#}
+{#                                                                            </span>#}
+{#                                                                        </span>#}
+{#                                                                    </div>#}
+{#                                                                </div>#}
+{#                                                            </div>#}
+{#                                                        </div>#}
+{#                                                    </div>#}
+{##}
+{#                                                    <div class="panel panel-default">#}
+{#                                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5" class="collapsed">#}
+{#                                                            <span class="item-count">5</span>#}
+{#                                                            <h4 class="panel-title">Nulla in diam</h4>#}
+{#                                                        </a>#}
+{##}
+{#                                                        <div id="collapse5" class="panel-collapse collapse">#}
+{#                                                            <div class="panel-body">#}
+{#                                                                <div class="item-content">#}
+{#                                                                    <div class="item-img item-height">#}
+{#                                                                        <div class="item-img-info products-thumb">#}
+{#                                                                            <a href="home_style_1_shop_product_default.html" title="Nulla in diam">#}
+{#                                                                                <img width="270" height="203" src="{% static 'images/micro.png' %}" class="attachment-thumbnail size-thumbnail wp-post-image" alt="6" title="6" />#}
+{#                                                                            </a>#}
+{#                                                                        </div>#}
+{#                                                                    </div>#}
+{##}
+{#                                                                    <h4>#}
+{#                                                                        <a href="home_style_1_shop_product_default.html" title="Nulla in diam">Nulla in diam</a>#}
+{#                                                                    </h4>#}
+{##}
+{#                                                                    <!-- rating  -->#}
+{#                                                                    <div class="reviews-content">#}
+{#                                                                        <div class="star"></div>#}
+{#                                                                        <div class="item-number-rating">0 Review(s)</div>#}
+{#                                                                    </div>#}
+{#                                                                    <!-- end rating  -->#}
+{##}
+{#                                                                    <div class="item-price">#}
+{#                                                                        <span>#}
+{#                                                                            <span class="woocommerce-Price-amount amount">#}
+{#                                                                                <span class="woocommerce-Price-currencySymbol"></span>200.00#}
+{#                                                                            </span>#}
+{#                                                                        </span>#}
+{#                                                                    </div>#}
+{#                                                                </div>#}
+{#                                                            </div>#}
+{#                                                        </div>#}
+{#                                                    </div>#}
+                                                    <!-- END ITEMS -->
+                                                </div>
+                                                <!-- END RECOMMEND PRODUCTS -->
+
+                                                <!-- NEW BLOGS -->
+                                                <div id="new-blog-container" class="blog-indicators carousel slide">
+                                                    <div class="block-title">
+                                                        <strong>
+                                                            <span>随机推荐</span>
+                                                        </strong>
+
+                                                        <div class="sn-img icon-bacsic sn-blog"></div>
+                                                    </div>
+                                                    <!-- ITEMS warning:对照源码看为什么不滑动-->
+                                                    <div class="carousel-inner">
+                                                        {% for supplier in context.topNCreateDateSupplier %}
+                                                        {% if supplier.num == 1 %}
+                                                        <div class="item active">
+                                                        {% else %}
+                                                        <div class="item">
+                                                        {% endif %}
+                                                            <div class="row">
+                                                                <div class="item-inner col-lg-12">
+                                                                    <a href="home_style_1_blog_left_sidebar_list_detail.html" title="Aliquam sit amet leo orci">
+                                                                        <img width="270" height="203" src="{% static 'images/2-270x203.jpg' %}" class="attachment-thumbnail size-thumbnail wp-post-image" alt="2" />
+                                                                    </a>
+
+                                                                    <div class="postTitle">
+                                                                        <h2>
+                                                                            <a title="Aliquam sit amet leo orci" href="home_style_1_blog_left_sidebar_list_detail.html">{{ supplier.name_cn }}</a>
+                                                                        </h2>
+                                                                    </div>
+
+                                                                    <div class="item-description">{{ supplier.description }}</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        {% endfor %}
+
+                                                        <!-- END ITEMS -->
+                                                    </div>
+
+                                                    <ul class="carousel-indicators">
+                                                        <li class="active" data-slide-to="0" data-target="#new-blog-container"></li>
+                                                        <li class="" data-slide-to="1" data-target="#new-blog-container"></li>
+                                                        <li class="" data-slide-to="2" data-target="#new-blog-container"></li>
+                                                    </ul>
+                                                </div>
+                                                <!-- END NEW BLOGS -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-9 vc_col-md-8 vc_col-xs-12">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
+                                                <div class="vc_row wpb_row vc_inner vc_row-fluid margin-bottom-30">
+                                                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                        <div class="vc_column-inner">
+                                                            <div class="wpb_wrapper">
+
+                                                                <!-- ELECTRONICS -->
+                                                                <div id="electronics_slider" class="sw-woo-container-slider responsive-slider woo-slider-default loading" data-lg="4" data-md="2" data-sm="2" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">
+                                                                    <div class="tab-category-title block-title">
+                                                                        <strong>
+                                                                            <span>{{ context.showBus0.name_cn }}</span>
+                                                                        </strong>
+                                                                        <div class="sn-img icon-bacsic item1"></div>
+                                                                    </div>
+
+                                                                    <div class="resp-slider-container">
+                                                                        <div class="slider responsive">
+                                                                            <!-- ITEMS -->
+                                                                            {% for supply in context.supplier0 %}
+                                                                            <div class="item">
+                                                                                <div class="item-wrap">
+                                                                                    <div class="item-detail">
+                                                                                        <div class="item-img products-thumb">
+                                                                                            <a href="home_style_1_shop_product_default.html">
+                                                                                                <div class="product-thumb-hover">
+                                                                                                    <img 	width="300" height="300" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="5"
+                                                                                                            src="{% static 'images/micro.png' %}"
+                                                                                                            srcset="{% static 'images/micro.png' %} 300w, {% static 'images/micro.png' %} 260w, {% static 'images/micro.png' %} 180w"
+                                                                                                            sizes="(max-width: 300px) 100vw, 300px" />
+                                                                                                </div>
+                                                                                            </a>
+                                                                                            <a href="{% url 'quick_view' supply.id %}" data-fancybox-type="ajax" class="sm_quickview_handler-list fancybox fancybox.ajax">Quick View </a>
+                                                                                        </div>
+
+                                                                                        <div class="item-content">
+                                                                                            <!-- rating  -->
+                                                                                            <div class="reviews-content">
+                                                                                                <div class="star">
+                                                                                                    <span style="width:52px"></span>
+                                                                                                </div>
+                                                                                                <div class="item-number-rating">2 Review(s)</div>
+                                                                                            </div>
+                                                                                            <!-- end rating  -->
+
+                                                                                            <h4>
+                                                                                                <a href="home_style_1_shop_product_default.html" title="{{ supply.name_cn }}">{{ supply.name_cn }}</a>
+                                                                                            </h4>
+
+                                                                                            <div class="item-price">
+                                                                                                <span>
+
+                                                                                                    <ins>
+                                                                                                        <span class="woocommerce-Price-amount amount">
+                                                                                                            <span class="woocommerce-Price-currencySymbol">信誉评分：{{ supply.credit }}</span>
+                                                                                                        </span>
+                                                                                                    </ins>
+                                                                                                </span>
+                                                                                            </div>
+
+                                                                                            <!-- add to cart, wishlist, compare -->
+                                                                                            <div class="add-info">
+                                                                                                <div class="yith-wcwl-add-to-wishlist">
+                                                                                                    <div class="yith-wcwl-add-button show" style="display:block">
+                                                                                                        <a href="#" rel="nofollow" class="add_to_wishlist">Add to Wishlist</a>
+                                                                                                        <img src="{% static 'images/wpspin_light.gif' %}" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" />
+                                                                                                    </div>
+
+                                                                                                    <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
+                                                                                                        <span class="feedback">Product added!</span>
+                                                                                                        <a href="#" rel="nofollow">Browse Wishlist</a>
+                                                                                                    </div>
+
+                                                                                                    <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none">
+                                                                                                        <span class="feedback">The product is already in the wishlist!</span>
+                                                                                                        <a href="#" rel="nofollow">Browse Wishlist</a>
+                                                                                                    </div>
+
+                                                                                                    <div style="clear:both"></div>
+                                                                                                    <div class="yith-wcwl-wishlistaddresponse"></div>
+                                                                                                </div>
+
+                                                                                                <div class="clear"></div>
+
+                                                                                                <a rel="nofollow" href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">加入收藏</a>
+
+                                                                                                <div class="woocommerce product compare-button">
+                                                                                                    <a href="javascript:void(0)" class="compare button" rel="nofollow">Compare</a>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            {% endfor %}
+                                                                            <!-- END ITEMS -->
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!--END ELECTRONICS -->
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="wpb_single_image wpb_content_element vc_align_center margin-bottom30">
+                                                    <figure class="wpb_wrapper vc_figure">
+                                                        <a href="home_style_1_shop_product_default.html" target="_self" class="vc_single_image-wrapper vc_box_border_grey">
+                                                            <img 	width="870" height="78" class="vc_single_image-img attachment-full" alt="content-home3"
+                                                                    src="{% static 'images/content-home3.jpg' %}"
+                                                                    srcset="{% static 'images/content-home3.jpg' %} 870w,{% static 'images/content-home3-370x33.jpg'%} 370w, {% static 'images/content-home3-800x72.jpg'%} 800w"
+                                                                    sizes="(max-width: 870px) 100vw, 870px" />
+                                                        </a>
+                                                    </figure>
+                                                </div>
+
+                                                <!-- JEWELRY -->
+                                                <div id="jewelry_slider" class="sw-woo-container-slider responsive-slider woo-slider-default loading" data-lg="4" data-md="2" data-sm="2" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">
+                                                    <div class="tab-category-title block-title">
+                                                        <strong>
+                                                            <span>{{ context.showBus1.name_cn }}</span>
+                                                        </strong>
+
+                                                        <div class="sn-img icon-bacsic item1"></div>
+                                                    </div>
+
+                                                    <div class="resp-slider-container">
+                                                        <div class="slider responsive">
+                                                           <!-- ITEMS -->
+                                                                {% for supply in context.supplier1 %}
+                                                                <div class="item">
+                                                                    <div class="item-wrap">
+                                                                        <div class="item-detail">
+                                                                            <div class="item-img products-thumb">
+                                                                                <a href="home_style_1_shop_product_default.html">
+                                                                                    <div class="product-thumb-hover">
+                                                                                        <img 	width="300" height="300" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="5"
+                                                                                                src="{% static 'images/micro.png' %}"
+                                                                                                srcset="{% static 'images/micro.png' %} 300w, {% static 'images/micro.png' %} 260w, {% static 'images/micro.png' %} 180w"
+                                                                                                sizes="(max-width: 300px) 100vw, 300px" />
+                                                                                    </div>
+                                                                                </a>
+                                                                                <a href="{% url 'quick_view' supply.id %}" data-fancybox-type="ajax" class="sm_quickview_handler-list fancybox fancybox.ajax">Quick View </a>
+                                                                            </div>
+
+                                                                            <div class="item-content">
+                                                                                <!-- rating  -->
+                                                                                <div class="reviews-content">
+                                                                                    <div class="star">
+                                                                                        <span style="width:52px"></span>
+                                                                                    </div>
+                                                                                    <div class="item-number-rating">2 Review(s)</div>
+                                                                                </div>
+                                                                                <!-- end rating  -->
+
+                                                                                <h4>
+                                                                                    <a href="home_style_1_shop_product_default.html" title="{{ supply.name_cn }}">{{ supply.name_cn }}</a>
+                                                                                </h4>
+
+                                                                                <div class="item-price">
+                                                                                    <span>
+
+                                                                                        <ins>
+                                                                                            <span class="woocommerce-Price-amount amount">
+                                                                                                <span class="woocommerce-Price-currencySymbol">信誉评分：{{ supply.credit }}</span>
+                                                                                            </span>
+                                                                                        </ins>
+                                                                                    </span>
+                                                                                </div>
+
+                                                                                <!-- add to cart, wishlist, compare -->
+                                                                                <div class="add-info">
+                                                                                    <div class="yith-wcwl-add-to-wishlist">
+                                                                                        <div class="yith-wcwl-add-button show" style="display:block">
+                                                                                            <a href="#" rel="nofollow" class="add_to_wishlist">Add to Wishlist</a>
+                                                                                            <img src="images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" />
+                                                                                        </div>
+
+                                                                                        <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
+                                                                                            <span class="feedback">Product added!</span>
+                                                                                            <a href="#" rel="nofollow">Browse Wishlist</a>
+                                                                                        </div>
+
+                                                                                        <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none">
+                                                                                            <span class="feedback">The product is already in the wishlist!</span>
+                                                                                            <a href="#" rel="nofollow">Browse Wishlist</a>
+                                                                                        </div>
+
+                                                                                        <div style="clear:both"></div>
+                                                                                        <div class="yith-wcwl-wishlistaddresponse"></div>
+                                                                                    </div>
+
+                                                                                    <div class="clear"></div>
+
+                                                                                    <a rel="nofollow" href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">加入收藏</a>
+
+                                                                                    <div class="woocommerce product compare-button">
+                                                                                        <a href="javascript:void(0)" class="compare button" rel="nofollow">Compare</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                {% endfor %}
+                                                                <!-- END ITEMS -->
+
+
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <!-- END JEWELRY -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="vc_row wpb_row vc_row-fluid no-margin-bottom">
+                                    <div class="wpb_column vc_column_container vc_col-sm-6">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
+                                                <div class="wpb_single_image wpb_content_element vc_align_left margin-bottom-30">
+                                                    <figure class="wpb_wrapper vc_figure">
+                                                        <a href="home_style_1_shop_product_default.html" target="_self" class="vc_single_image-wrapper vc_box_border_grey">
+                                                            <img 	width="570" height="200" class="vc_single_image-img attachment-full" alt="content-home1"
+                                                                    src="{% static 'images/content-home1.jpg' %}"
+                                                                    srcset="{% static 'images/content-home1.jpg' %} 570w, {% static 'images/content-home1-370x130.jpg' %} 370w"
+                                                                    sizes="(max-width: 570px) 100vw, 570px" />
+                                                        </a>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="wpb_column vc_column_container vc_col-sm-6">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
+                                                <div class="wpb_single_image wpb_content_element vc_align_center margin-bottom-30">
+                                                    <figure class="wpb_wrapper vc_figure">
+                                                        <a href="home_style_1_shop_product_default.html" target="_self" class="vc_single_image-wrapper vc_box_border_grey">
+                                                            <img 	width="570" height="200" class="vc_single_image-img attachment-full" alt="content-home2"
+                                                                    src="{% static 'images/content-home2.jpg' %}"
+                                                                    srcset="{% static 'images/content-home2.jpg' %} 570w, {% static 'images/content-home2-370x130.jpg' %} 370w"
+                                                                    sizes="(max-width: 570px) 100vw, 570px" />
+                                                        </a>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="vc_row wpb_row vc_row-fluid margin-bottom-30">
+                                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
+                                                <!-- SPORTS -->
+                                                <div id="sport_slider" class="sw-woo-container-slider responsive-slider woo-slider-default loading" data-lg="5" data-md="3" data-sm="2" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">
+                                                    <div class="tab-category-title block-title">
+                                                        <strong>
+                                                            <span>{{ context.showBus2.name_cn }}</span>
+                                                        </strong>
+
+                                                        <div class="sn-img icon-bacsic item1"></div>
+                                                    </div>
+
+                                                    <div class="resp-slider-container">
+                                                        <div class="slider responsive">
+                                                            <!-- ITEMS -->
+                                                                {% for supply in context.supplier2 %}
+                                                                <div class="item">
+                                                                    <div class="item-wrap">
+                                                                        <div class="item-detail">
+                                                                            <div class="item-img products-thumb">
+                                                                                <a href="home_style_1_shop_product_default.html">
+                                                                                    <div class="product-thumb-hover">
+                                                                                        <img 	width="300" height="300" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="5"
+                                                                                                src="{% static 'images/micro.png' %}"
+                                                                                                srcset="{% static 'images/micro.png' %} 300w, {% static 'images/micro.png' %} 260w, {% static 'images/micro.png' %} 180w"
+                                                                                                sizes="(max-width: 300px) 100vw, 300px" />
+                                                                                    </div>
+                                                                                </a>
+                                                                                <a href="{% url 'quick_view' supply.id %}" data-fancybox-type="ajax" class="sm_quickview_handler-list fancybox fancybox.ajax">Quick View </a>
+                                                                            </div>
+
+                                                                            <div class="item-content">
+                                                                                <!-- rating  -->
+                                                                                <div class="reviews-content">
+                                                                                    <div class="star">
+                                                                                        <span style="width:52px"></span>
+                                                                                    </div>
+                                                                                    <div class="item-number-rating">2 Review(s)</div>
+                                                                                </div>
+                                                                                <!-- end rating  -->
+
+                                                                                <h4>
+                                                                                    <a href="home_style_1_shop_product_default.html" title="{{ supply.name_cn }}">{{ supply.name_cn }}</a>
+                                                                                </h4>
+
+                                                                                <div class="item-price">
+                                                                                    <span>
+                                                                                        <!--begin 删除标签-->
+                                    {#                                                    <del>#}
+                                    {#                                                        <span class="woocommerce-Price-amount amount">#}
+                                    {#                                                            <span class="woocommerce-Price-currencySymbol">$</span>86.00#}
+                                    {#                                                        </span>#}
+                                    {#                                                    </del>#}
+                                                                                         <!--end 删除标签-->
+                                                                                        <ins>
+                                                                                            <span class="woocommerce-Price-amount amount">
+                                                                                                <span class="woocommerce-Price-currencySymbol">信誉评分：{{ supply.credit }}</span>
+                                                                                            </span>
+                                                                                        </ins>
+                                                                                    </span>
+                                                                                </div>
+
+                                                                                <!-- add to cart, wishlist, compare -->
+                                                                                <div class="add-info">
+                                                                                    <div class="yith-wcwl-add-to-wishlist">
+                                                                                        <div class="yith-wcwl-add-button show" style="display:block">
+                                                                                            <a href="#" rel="nofollow" class="add_to_wishlist">Add to Wishlist</a>
+                                                                                            <img src="{% static 'images/wpspin_light.gif' %}" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" />
+                                                                                        </div>
+
+                                                                                        <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
+                                                                                            <span class="feedback">Product added!</span>
+                                                                                            <a href="#" rel="nofollow">Browse Wishlist</a>
+                                                                                        </div>
+
+                                                                                        <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none">
+                                                                                            <span class="feedback">The product is already in the wishlist!</span>
+                                                                                            <a href="#" rel="nofollow">Browse Wishlist</a>
+                                                                                        </div>
+
+                                                                                        <div style="clear:both"></div>
+                                                                                        <div class="yith-wcwl-wishlistaddresponse"></div>
+                                                                                    </div>
+
+                                                                                    <div class="clear"></div>
+
+                                                                                    <a rel="nofollow" href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">加入收藏</a>
+
+                                                                                    <div class="woocommerce product compare-button">
+                                                                                        <a href="javascript:void(0)" class="compare button" rel="nofollow">Compare</a>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                {% endfor %}
+                                                                <!-- END ITEMS -->
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <!-- END SPORTS -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="vc_row wpb_row vc_row-fluid margin-bottom-30">
+                                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-xs-12">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
+                                                <!-- TOP SELLING -->
+                                                <div id="top_selling_slider" class="category-ajax-slider">
+                                                    <div class="tab-category-title block-title">
+                                                        <strong>
+                                                            <span>TOP SELLING</span>
+                                                        </strong>
+
+                                                        <div class="sn-img icon-bacsic item1"></div>
+                                                    </div>
+
+                                                    <div id="tab_top_selling_slider" class="sw-tab-slider responsive-slider" data-lg="10" data-md="8" data-sm="5" data-xs="3" data-mobile="2" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">
+                                                        <ul class="nav nav-tabs slider responsive">
+                                                            <li class="">
+                                                                <a href="#category_ajax_60" data-toggle="tab" data-catid="60" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">
+                                                                    <div class="item-image">
+                                                                        <img width="70" height="30" src="{% static 'images/3_1.png' %}" class="attachment-350x230 size-350x230" alt="3_1" />
+                                                                        <h3>Computer</h3>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+
+                                                            <li class="">
+                                                                <a href="#category_ajax_58" data-toggle="tab" data-catid="58" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">
+                                                                    <div class="item-image">
+                                                                        <img width="70" height="30" src="{% static 'images/1_1.png' %}" class="attachment-350x230 size-350x230" alt="1_1" />
+                                                                        <h3>Electronic</h3>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+
+                                                            <li class="active">
+                                                                <a href="#category_ajax_65" data-toggle="tab" data-catid="65" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">
+                                                                    <div class="item-image">
+                                                                        <img width="70" height="30" src="{% static 'images/7_1.png' %}" class="attachment-350x230 size-350x230" alt="7_1" />
+                                                                        <h3>Fashion</h3>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+
+                                                            <li class="">
+                                                                <a href="#category_ajax_62" data-toggle="tab" data-catid="62" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">
+                                                                    <div class="item-image">
+                                                                        <img width="70" height="30" src="{% static 'images/5_1.png' %}" class="attachment-350x230 size-350x230" alt="5_1" />
+                                                                        <h3>MenSell</h3>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+
+                                                            <li class="">
+                                                                <a href="#category_ajax_59" data-toggle="tab" data-catid="59" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">
+                                                                    <div class="item-image">
+                                                                        <img width="70" height="30" src="{% static 'images/2_1.png' %}" class="attachment-350x230 size-350x230" alt="2_1" />
+                                                                        <h3>Mobiles</h3>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+
+                                                            <li class="">
+                                                                <a href="#category_ajax_67" data-toggle="tab" data-catid="67" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">
+                                                                    <div class="item-image">
+                                                                        <img width="70" height="30" src="{% static 'images/8_1.png' %}" class="attachment-350x230 size-350x230" alt="8_1" />
+                                                                        <h3>Purses</h3>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+
+                                                            <li class="">
+                                                                <a href="#category_ajax_61" data-toggle="tab" data-catid="61" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">
+                                                                    <div class="item-image">
+                                                                        <img width="70" height="30" src="{% static 'images/4.png' %}" class="attachment-350x230 size-350x230" alt="4" />
+                                                                        <h3>Sports</h3>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+
+                                                            <li class="">
+                                                                <a href="#category_ajax_63" data-toggle="tab" data-catid="63" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">
+                                                                    <div class="item-image">
+                                                                        <img width="70" height="30" src="{% static 'images/6.png' %}" class="attachment-350x230 size-350x230" alt="6" />
+                                                                        <h3>Vesture</h3>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+
+                                                            <li class="">
+                                                                <a href="#category_ajax_66" data-toggle="tab" data-catid="66" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">
+                                                                    <div class="item-image">
+                                                                        <img width="70" height="30" src="{% static 'images/9_1.png' %}" class="attachment-350x230 size-350x230" alt="9_1" />
+                                                                        <h3>Watches</h3>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+
+                                                            <li class="">
+                                                                <a href="#category_ajax_64" data-toggle="tab" data-catid="64" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">
+                                                                    <div class="item-image">
+                                                                        <img width="70" height="30" src="{% static 'images/10.png' %}" class="attachment-350x230 size-350x230" alt="10" />
+                                                                        <h3>Women</h3>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <div class="tab-content">
+                                                        <div id="category_ajax_60" class="tab-pane fade in"></div>
+                                                        <div id="category_ajax_58" class="tab-pane fade in"></div>
+                                                        <div id="category_ajax_65" class="tab-pane fade in active"></div>
+                                                        <div id="category_ajax_62" class="tab-pane fade in"></div>
+                                                        <div id="category_ajax_59" class="tab-pane fade in"></div>
+                                                        <div id="category_ajax_67" class="tab-pane fade in"></div>
+                                                        <div id="category_ajax_61" class="tab-pane fade in"></div>
+                                                        <div id="category_ajax_63" class="tab-pane fade in"></div>
+                                                        <div id="category_ajax_66" class="tab-pane fade in"></div>
+                                                        <div id="category_ajax_64" class="tab-pane fade in"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- END TOP SELLING -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- END MAIN -->
+{% endblock %}
+<!--报错补上的-->
+</div>
+</div>

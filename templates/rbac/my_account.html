@@ -1,0 +1,77 @@
+﻿{% extends 'base_main.html' %}
+{% block main %}
+<!-- MAIN -->
+<div id="main" class="theme-clearfix" role="document">
+    <div class="breadcrumbs theme-clearfix">
+        <div class="container">
+            <ul class="breadcrumb">
+               <li>
+                <a id="home" href="{% url 'index' %}">首页</a>
+                <span class="go-page"></span>
+                </li>
+
+                <li class="active">
+                    <span>我的账户</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="">
+            <div id="contents" role="main" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="single post-29 page type-page status-publish hentry">
+                    <div class="entry">
+                        <div class="entry-content">
+                            <header>
+                                <h2 class="entry-title">账户信息</h2>
+                            </header>
+
+                            <div class="entry-content">
+                                <div class="woocommerce">
+                                    <nav class="woocommerce-MyAccount-navigation">
+                                        <ul>
+                                            <li class="is-active">
+                                                <a href="my_account.html">用户名：{{ context.username }}</a>
+                                            </li>
+
+                                            <li >
+                                               <a href="home_style_1_order.html">注册邮箱：2059164874@qq.com</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="home_style_1_addresses.html">会员等级：{{ context.groupname }}</a><a href="{% url 'upgrade_by_spend' %}">       <strong>提升等级，解锁更多权限</strong></a>
+                                            </li>
+
+                                            <li>
+                                               <a href="home_style_1_account_details.html">享有权限:{{ context.limits }}</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="home_style_1_create_acc.html">我的收藏</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+
+                                    <div class="woocommerce-MyAccount-content">
+                                        <p>
+{#                                            Hello <strong>Tester</strong> (not Tester? <a href="home_style_1_create_acc.html">Sign out</a>)#}
+                                        </p>
+                                        <p>
+                                            您可以对个人信息进行更改
+{#                                            <a href="home_style_1_order.html">recent orders</a>,#}
+{#                                            manage your <a href="home_style_1_addresses.html">shipping and billing addresses</a>#}
+{#                                            and <a href="home_style_1_account_details.html">edit your password and account details</a>.#}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END MAIN -->
+{% endblock %}

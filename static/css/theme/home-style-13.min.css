@@ -1,0 +1,77 @@
+body,
+input,
+button,
+select,
+textarea,
+.search-query {
+    font-family: Roboto!important
+}
+.main-slider-custom {
+    margin-top: 30px!important;
+    margin-bottom: 0px!important
+}
+.about-us-1 {
+    margin-right: -15px!important;
+    margin-bottom: 30px!important;
+    margin-left: -15px!important
+}
+.our-team-1 {
+    margin-right: -15px!important;
+    margin-left: -15px!important
+}
+.sub-main-slider-custom {
+    margin-bottom: 18px!important
+}
+.no-padding-left-right {
+    padding-right: 0px!important;
+    padding-left: 0px!important
+}
+.no-margin-bottom {
+    margin-bottom: 0px!important
+}
+.margin-bottom-30 {
+    margin-bottom: 30px!important
+}
+.margin-bottom-25 {
+    margin-bottom: 25px!important
+}
+.margin-bottom-10 {
+    margin-bottom: 10px!important
+}
+.padding-right-5 {
+    padding-right: 5px!important
+}
+.padding-left-5 {
+    padding-left: 5px!important
+}
+.subcribe {
+    min-height: 32px;
+    width: 100%;
+    max-width: 480px
+}
+.mc4wp-form-basic,
+.mc4wp-form-basic input,
+.mc4wp-form-basic label,
+.mc4wp-form-theme,
+.mc4wp-form-theme input,
+.mc4wp-form-theme label {
+    line-height: normal
+}
+.margin-top-75 {
+    margin-top: 75px!important
+}
+.margin-top-45 {
+    margin-top: 45px!important
+}
+.margin-bottom-45 {
+    margin-bottom: 45px!important
+}
+.padding-right-15 {
+    padding-right: 15px!important
+}
+.padding-left-15 {
+    padding-left: 15px!important
+}
+.margin-top-15{margin-top:15px!important}
+input[name="apply_coupon"]{height:38px}
+.margin-top-20{margin-top:20px!important}

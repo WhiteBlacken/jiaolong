@@ -1,0 +1,30 @@
+{% extends 'myAdmin/base_keyword_cn_en_list.html' %}
+
+{% block 2active %}
+    class="nav-link active"
+{% endblock %}
+{% block 2-3active %}
+    class="nav-link active"
+{% endblock %}
+
+{% block midNav %}
+    <li><a href="#" class="am-icon-home">数据录入与审核</a></li>
+    <li><a href="#">关键词英文同义表</a></li>
+{% endblock %}
+{% block secondTitle %}
+    关键词英文同义表
+{% endblock %}
+{% block keyType %}
+    英文关键词
+{% endblock %}
+{% block firstColumn %}
+    {{ keyword.english_keyword }}
+{% endblock %}
+{% block editHref %}
+    {% url 'go_edit_keyword_en' keyword.id %}
+{% endblock %}
+{% block deleteHref %}
+    {% url 'delete_keyword_en' keyword.id %}
+{% endblock %}
+
+

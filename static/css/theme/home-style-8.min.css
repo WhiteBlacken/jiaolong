@@ -1,0 +1,80 @@
+body,
+input,
+button,
+select,
+textarea,
+.search-query {
+    font-family: Roboto!important
+}
+.hot-collection {
+    margin-bottom: 56px!important;
+    padding-top: 27px!important;
+    padding-bottom: 60px!important;
+    background-color: #f5f5f5!important;
+    margin-left: 0;
+    margin-right: 0
+}
+.section-today-deals {
+    background-color: #f5f5f5!important
+}
+.shipping-container {
+    margin-bottom: 56px!important;
+    background-image: url(../../images/banner82.jpg)!important;
+    background-position: center!important;
+    background-repeat: no-repeat!important;
+    background-size: cover!important
+}
+.main-slider-custom {
+    margin-top: 30px!important;
+    margin-bottom: 0px!important
+}
+.about-us-1 {
+    margin-right: -15px!important;
+    margin-bottom: 30px!important;
+    margin-left: -15px!important
+}
+.our-team-1 {
+    margin-right: -15px!important;
+    margin-left: -15px!important
+}
+.sub-main-slider-custom {
+    margin-bottom: 18px!important
+}
+.no-padding-left-right {
+    padding-right: 0px!important;
+    padding-left: 0px!important
+}
+.no-margin-bottom {
+    margin-bottom: 0px!important
+}
+.margin-bottom-30 {
+    margin-bottom: 30px!important
+}
+.margin-bottom-20 {
+    margin-bottom: 20px!important
+}
+.margin-bottom-25 {
+    margin-bottom: 25px!important
+}
+.margin-bottom-40 {
+    margin-bottom: 40px!important
+}
+.margin-bottom-10 {
+    margin-bottom: 10px!important
+}
+.padding-right-5 {
+    padding-right: 5px!important
+}
+.padding-left-5 {
+    padding-left: 5px!important
+}
+.padding-right-15 {
+    padding-right: 15px!important
+}
+.padding-left-15 {
+    padding-left: 15px!important
+}
+.margin-top-15 {
+    margin-top: 15px!important
+}
+input[name="apply_coupon"]{height:38px}

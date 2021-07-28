@@ -1,0 +1,158 @@
+/* Slider */
+.slick-slider{
+    position: relative;
+  width: 100%;
+  overflow: hidden;
+    display: block;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus{
+    outline: none;
+}
+.slick-list.dragging{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+.slick-track:before,
+.slick-track:after{
+    display: table;
+    content: '';
+}
+.slick-track:after{
+    clear: both;
+}
+.slick-loading .slick-track{
+    visibility: hidden;
+}
+
+.slick-slide{
+    display: none;
+    float: left;
+    overflow:hidden;
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide{
+    float: right;
+}
+.slick-slide img{
+    display: block;
+}
+.slick-slide.slick-loading img{
+    display: none;
+}
+.slick-slide.dragging img{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide{
+    display: block;
+	padding: 15px;
+}
+.slick-loading .slick-slide{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide{
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.responsive-slider.sw-partner-container-slider {
+	/* position: relative;  */
+	overflow: visible;
+}
+.responsive-slider.sw-partner-container-slider  .resp-slider-container{
+	margin: 0;
+}
+.sw-partner-container-slider .slider {
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    z-index: 8;
+}
+.sw-partner-container-slider .slider .item{
+	background-size: 100% 100%;
+}
+
+.sw-partner-container-slider .no-rgba .slider .item{
+	text-align: center;
+}
+.sw-partner-container-slider .slider .item img{
+	
+    vertical-align: middle;
+}
+
+.sw-partner-container-slider .slider .item img:hover{
+	cursor: pointer;
+    opacity:0.8;
+}
+
+.sw-partner-container-slider .resp-slider-container .slider .item{
+	margin-bottom: 0%;
+	display: inline-block;
+	font-size: medium;
+	white-space: normal;
+	vertical-align: top;
+	float: none;
+}
+/*########################################## css for info item ############################################*/
+.sw-partner-container-slider .resp-slider-container .slider .item .item-wrap{
+	width: 100%;
+	position: relative;
+	background:none;
+}
+.responsive-slider.sw-partner-container-slider .res-button{
+	background: #c2c2c2;
+	box-shadow: none;
+	display:none !important; 
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	opacity: 1;
+	left: -12px;
+	top: 50%;
+	margin-top: -12px;
+}
+.responsive-slider.sw-partner-container-slider:hover .res-button {
+     display:block !important;
+}
+.responsive-slider.sw-partner-container-slider .res-button.slick-next{
+	right: -12px;
+}
+.responsive-slider.sw-partner-container-slider .res-button:before{
+	font-size: 16px;
+	color: #fff;
+}

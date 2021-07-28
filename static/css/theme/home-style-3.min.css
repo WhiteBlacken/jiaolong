@@ -1,0 +1,25 @@
+.custom-slider .res-button.slick-prev {
+	left: -5px !important;
+}
+
+.margin-top-20 {
+	margin-top: 20px !important;
+}
+
+.margin-bottom-20 {
+	margin-bottom: 20px !important;
+}
+
+.header-style3 .yt-header-under {
+	height: 52px;
+}
+
+.woo-slider-childcat .resp-slider-container {
+	margin-top: 5px !important;
+}
+
+@media (max-width: 1024px) {	
+	.blog-bottomv3 .widget-the-blog ul>li.item-0 .widget-caption .item-title, .blog-bottomv3 .widget-the-blog ul>li .widget-caption .item-content {
+		margin-left: 0px !important;
+	}
+}
