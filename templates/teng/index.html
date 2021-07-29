@@ -507,7 +507,7 @@
                                                                                 <div class="item-wrap">
                                                                                     <div class="item-detail">
                                                                                         <div class="item-img products-thumb">
-                                                                                            <a href="home_style_1_shop_product_default.html">
+                                                                                            <a href="{% url 'show_supply_detail' supply.id %}">
                                                                                                 <div class="product-thumb-hover">
                                                                                                     <img 	width="300" height="300" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="5"
                                                                                                             src="{% static 'images/micro.png' %}"
@@ -529,7 +529,7 @@
                                                                                             <!-- end rating  -->
 
                                                                                             <h4>
-                                                                                                <a href="home_style_1_shop_product_default.html" title="{{ supply.name_cn }}">{{ supply.name_cn }}</a>
+                                                                                                <a href="{% url 'show_supply_detail' supply.id %}" title="{{ supply.name_cn }}">{{ supply.name_cn }}</a>
                                                                                             </h4>
 
                                                                                             <div class="item-price">
@@ -591,7 +591,7 @@
 
                                                 <div class="wpb_single_image wpb_content_element vc_align_center margin-bottom30">
                                                     <figure class="wpb_wrapper vc_figure">
-                                                        <a href="home_style_1_shop_product_default.html" target="_self" class="vc_single_image-wrapper vc_box_border_grey">
+                                                        <a href="111" target="_self" class="vc_single_image-wrapper vc_box_border_grey">
                                                             <img 	width="870" height="78" class="vc_single_image-img attachment-full" alt="content-home3"
                                                                     src="{% static 'images/content-home3.jpg' %}"
                                                                     srcset="{% static 'images/content-home3.jpg' %} 870w,{% static 'images/content-home3-370x33.jpg'%} 370w, {% static 'images/content-home3-800x72.jpg'%} 800w"
@@ -618,7 +618,7 @@
                                                                     <div class="item-wrap">
                                                                         <div class="item-detail">
                                                                             <div class="item-img products-thumb">
-                                                                                <a href="home_style_1_shop_product_default.html">
+                                                                                <a href="{% url 'show_supply_detail' supply.id %}">
                                                                                     <div class="product-thumb-hover">
                                                                                         <img 	width="300" height="300" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="5"
                                                                                                 src="{% static 'images/micro.png' %}"
@@ -640,7 +640,7 @@
                                                                                 <!-- end rating  -->
 
                                                                                 <h4>
-                                                                                    <a href="home_style_1_shop_product_default.html" title="{{ supply.name_cn }}">{{ supply.name_cn }}</a>
+                                                                                    <a href="{% url 'show_supply_detail' supply.id %}" title="{{ supply.name_cn }}">{{ supply.name_cn }}</a>
                                                                                 </h4>
 
                                                                                 <div class="item-price">
@@ -659,7 +659,7 @@
                                                                                     <div class="yith-wcwl-add-to-wishlist">
                                                                                         <div class="yith-wcwl-add-button show" style="display:block">
                                                                                             <a href="#" rel="nofollow" class="add_to_wishlist">Add to Wishlist</a>
-                                                                                            <img src="images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" />
+                                                                                            <img src="{% static 'images/wpspin_light.gif' %}" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" />
                                                                                         </div>
 
                                                                                         <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
@@ -707,7 +707,7 @@
                                             <div class="wpb_wrapper">
                                                 <div class="wpb_single_image wpb_content_element vc_align_left margin-bottom-30">
                                                     <figure class="wpb_wrapper vc_figure">
-                                                        <a href="home_style_1_shop_product_default.html" target="_self" class="vc_single_image-wrapper vc_box_border_grey">
+                                                        <a href="111" target="_self" class="vc_single_image-wrapper vc_box_border_grey">
                                                             <img 	width="570" height="200" class="vc_single_image-img attachment-full" alt="content-home1"
                                                                     src="{% static 'images/content-home1.jpg' %}"
                                                                     srcset="{% static 'images/content-home1.jpg' %} 570w, {% static 'images/content-home1-370x130.jpg' %} 370w"
@@ -759,7 +759,7 @@
                                                                     <div class="item-wrap">
                                                                         <div class="item-detail">
                                                                             <div class="item-img products-thumb">
-                                                                                <a href="home_style_1_shop_product_default.html">
+                                                                                <a href="{% url 'show_supply_detail' supply.id %}">
                                                                                     <div class="product-thumb-hover">
                                                                                         <img 	width="300" height="300" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="5"
                                                                                                 src="{% static 'images/micro.png' %}"
@@ -781,7 +781,7 @@
                                                                                 <!-- end rating  -->
 
                                                                                 <h4>
-                                                                                    <a href="home_style_1_shop_product_default.html" title="{{ supply.name_cn }}">{{ supply.name_cn }}</a>
+                                                                                    <a href="{% url 'show_supply_detail' supply.id %}" title="{{ supply.name_cn }}">{{ supply.name_cn }}</a>
                                                                                 </h4>
 
                                                                                 <div class="item-price">
@@ -846,132 +846,132 @@
                                     </div>
                                 </div>
 
-                                <div class="vc_row wpb_row vc_row-fluid margin-bottom-30">
-                                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-xs-12">
-                                        <div class="vc_column-inner">
-                                            <div class="wpb_wrapper">
-                                                <!-- TOP SELLING -->
-                                                <div id="top_selling_slider" class="category-ajax-slider">
-                                                    <div class="tab-category-title block-title">
-                                                        <strong>
-                                                            <span>TOP SELLING</span>
-                                                        </strong>
-
-                                                        <div class="sn-img icon-bacsic item1"></div>
-                                                    </div>
-
-                                                    <div id="tab_top_selling_slider" class="sw-tab-slider responsive-slider" data-lg="10" data-md="8" data-sm="5" data-xs="3" data-mobile="2" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">
-                                                        <ul class="nav nav-tabs slider responsive">
-                                                            <li class="">
-                                                                <a href="#category_ajax_60" data-toggle="tab" data-catid="60" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">
-                                                                    <div class="item-image">
-                                                                        <img width="70" height="30" src="{% static 'images/3_1.png' %}" class="attachment-350x230 size-350x230" alt="3_1" />
-                                                                        <h3>Computer</h3>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-
-                                                            <li class="">
-                                                                <a href="#category_ajax_58" data-toggle="tab" data-catid="58" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">
-                                                                    <div class="item-image">
-                                                                        <img width="70" height="30" src="{% static 'images/1_1.png' %}" class="attachment-350x230 size-350x230" alt="1_1" />
-                                                                        <h3>Electronic</h3>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-
-                                                            <li class="active">
-                                                                <a href="#category_ajax_65" data-toggle="tab" data-catid="65" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">
-                                                                    <div class="item-image">
-                                                                        <img width="70" height="30" src="{% static 'images/7_1.png' %}" class="attachment-350x230 size-350x230" alt="7_1" />
-                                                                        <h3>Fashion</h3>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-
-                                                            <li class="">
-                                                                <a href="#category_ajax_62" data-toggle="tab" data-catid="62" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">
-                                                                    <div class="item-image">
-                                                                        <img width="70" height="30" src="{% static 'images/5_1.png' %}" class="attachment-350x230 size-350x230" alt="5_1" />
-                                                                        <h3>MenSell</h3>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-
-                                                            <li class="">
-                                                                <a href="#category_ajax_59" data-toggle="tab" data-catid="59" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">
-                                                                    <div class="item-image">
-                                                                        <img width="70" height="30" src="{% static 'images/2_1.png' %}" class="attachment-350x230 size-350x230" alt="2_1" />
-                                                                        <h3>Mobiles</h3>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-
-                                                            <li class="">
-                                                                <a href="#category_ajax_67" data-toggle="tab" data-catid="67" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">
-                                                                    <div class="item-image">
-                                                                        <img width="70" height="30" src="{% static 'images/8_1.png' %}" class="attachment-350x230 size-350x230" alt="8_1" />
-                                                                        <h3>Purses</h3>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-
-                                                            <li class="">
-                                                                <a href="#category_ajax_61" data-toggle="tab" data-catid="61" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">
-                                                                    <div class="item-image">
-                                                                        <img width="70" height="30" src="{% static 'images/4.png' %}" class="attachment-350x230 size-350x230" alt="4" />
-                                                                        <h3>Sports</h3>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-
-                                                            <li class="">
-                                                                <a href="#category_ajax_63" data-toggle="tab" data-catid="63" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">
-                                                                    <div class="item-image">
-                                                                        <img width="70" height="30" src="{% static 'images/6.png' %}" class="attachment-350x230 size-350x230" alt="6" />
-                                                                        <h3>Vesture</h3>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-
-                                                            <li class="">
-                                                                <a href="#category_ajax_66" data-toggle="tab" data-catid="66" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">
-                                                                    <div class="item-image">
-                                                                        <img width="70" height="30" src="{% static 'images/9_1.png' %}" class="attachment-350x230 size-350x230" alt="9_1" />
-                                                                        <h3>Watches</h3>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-
-                                                            <li class="">
-                                                                <a href="#category_ajax_64" data-toggle="tab" data-catid="64" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">
-                                                                    <div class="item-image">
-                                                                        <img width="70" height="30" src="{% static 'images/10.png' %}" class="attachment-350x230 size-350x230" alt="10" />
-                                                                        <h3>Women</h3>
-                                                                    </div>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-
-                                                    <div class="tab-content">
-                                                        <div id="category_ajax_60" class="tab-pane fade in"></div>
-                                                        <div id="category_ajax_58" class="tab-pane fade in"></div>
-                                                        <div id="category_ajax_65" class="tab-pane fade in active"></div>
-                                                        <div id="category_ajax_62" class="tab-pane fade in"></div>
-                                                        <div id="category_ajax_59" class="tab-pane fade in"></div>
-                                                        <div id="category_ajax_67" class="tab-pane fade in"></div>
-                                                        <div id="category_ajax_61" class="tab-pane fade in"></div>
-                                                        <div id="category_ajax_63" class="tab-pane fade in"></div>
-                                                        <div id="category_ajax_66" class="tab-pane fade in"></div>
-                                                        <div id="category_ajax_64" class="tab-pane fade in"></div>
-                                                    </div>
-                                                </div>
-                                                <!-- END TOP SELLING -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+{#                                <div class="vc_row wpb_row vc_row-fluid margin-bottom-30">#}
+{#                                    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-xs-12">#}
+{#                                        <div class="vc_column-inner">#}
+{#                                            <div class="wpb_wrapper">#}
+{#                                                <!-- TOP SELLING -->#}
+{#                                                <div id="top_selling_slider" class="category-ajax-slider">#}
+{#                                                    <div class="tab-category-title block-title">#}
+{#                                                        <strong>#}
+{#                                                            <span>TOP SELLING</span>#}
+{#                                                        </strong>#}
+{##}
+{#                                                        <div class="sn-img icon-bacsic item1"></div>#}
+{#                                                    </div>#}
+{##}
+{#                                                    <div id="tab_top_selling_slider" class="sw-tab-slider responsive-slider" data-lg="10" data-md="8" data-sm="5" data-xs="3" data-mobile="2" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">#}
+{#                                                        <ul class="nav nav-tabs slider responsive">#}
+{#                                                            <li class="">#}
+{#                                                                <a href="#category_ajax_60" data-toggle="tab" data-catid="60" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">#}
+{#                                                                    <div class="item-image">#}
+{#                                                                        <img width="70" height="30" src="{% static 'images/3_1.png' %}" class="attachment-350x230 size-350x230" alt="3_1" />#}
+{#                                                                        <h3>Computer</h3>#}
+{#                                                                    </div>#}
+{#                                                                </a>#}
+{#                                                            </li>#}
+{##}
+{#                                                            <li class="">#}
+{#                                                                <a href="#category_ajax_58" data-toggle="tab" data-catid="58" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">#}
+{#                                                                    <div class="item-image">#}
+{#                                                                        <img width="70" height="30" src="{% static 'images/1_1.png' %}" class="attachment-350x230 size-350x230" alt="1_1" />#}
+{#                                                                        <h3>Electronic</h3>#}
+{#                                                                    </div>#}
+{#                                                                </a>#}
+{#                                                            </li>#}
+{##}
+{#                                                            <li class="active">#}
+{#                                                                <a href="#category_ajax_65" data-toggle="tab" data-catid="65" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">#}
+{#                                                                    <div class="item-image">#}
+{#                                                                        <img width="70" height="30" src="{% static 'images/7_1.png' %}" class="attachment-350x230 size-350x230" alt="7_1" />#}
+{#                                                                        <h3>Fashion</h3>#}
+{#                                                                    </div>#}
+{#                                                                </a>#}
+{#                                                            </li>#}
+{##}
+{#                                                            <li class="">#}
+{#                                                                <a href="#category_ajax_62" data-toggle="tab" data-catid="62" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">#}
+{#                                                                    <div class="item-image">#}
+{#                                                                        <img width="70" height="30" src="{% static 'images/5_1.png' %}" class="attachment-350x230 size-350x230" alt="5_1" />#}
+{#                                                                        <h3>MenSell</h3>#}
+{#                                                                    </div>#}
+{#                                                                </a>#}
+{#                                                            </li>#}
+{##}
+{#                                                            <li class="">#}
+{#                                                                <a href="#category_ajax_59" data-toggle="tab" data-catid="59" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">#}
+{#                                                                    <div class="item-image">#}
+{#                                                                        <img width="70" height="30" src="{% static 'images/2_1.png' %}" class="attachment-350x230 size-350x230" alt="2_1" />#}
+{#                                                                        <h3>Mobiles</h3>#}
+{#                                                                    </div>#}
+{#                                                                </a>#}
+{#                                                            </li>#}
+{##}
+{#                                                            <li class="">#}
+{#                                                                <a href="#category_ajax_67" data-toggle="tab" data-catid="67" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">#}
+{#                                                                    <div class="item-image">#}
+{#                                                                        <img width="70" height="30" src="{% static 'images/8_1.png' %}" class="attachment-350x230 size-350x230" alt="8_1" />#}
+{#                                                                        <h3>Purses</h3>#}
+{#                                                                    </div>#}
+{#                                                                </a>#}
+{#                                                            </li>#}
+{##}
+{#                                                            <li class="">#}
+{#                                                                <a href="#category_ajax_61" data-toggle="tab" data-catid="61" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">#}
+{#                                                                    <div class="item-image">#}
+{#                                                                        <img width="70" height="30" src="{% static 'images/4.png' %}" class="attachment-350x230 size-350x230" alt="4" />#}
+{#                                                                        <h3>Sports</h3>#}
+{#                                                                    </div>#}
+{#                                                                </a>#}
+{#                                                            </li>#}
+{##}
+{#                                                            <li class="">#}
+{#                                                                <a href="#category_ajax_63" data-toggle="tab" data-catid="63" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">#}
+{#                                                                    <div class="item-image">#}
+{#                                                                        <img width="70" height="30" src="{% static 'images/6.png' %}" class="attachment-350x230 size-350x230" alt="6" />#}
+{#                                                                        <h3>Vesture</h3>#}
+{#                                                                    </div>#}
+{#                                                                </a>#}
+{#                                                            </li>#}
+{##}
+{#                                                            <li class="">#}
+{#                                                                <a href="#category_ajax_66" data-toggle="tab" data-catid="66" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">#}
+{#                                                                    <div class="item-image">#}
+{#                                                                        <img width="70" height="30" src="{% static 'images/9_1.png' %}" class="attachment-350x230 size-350x230" alt="9_1" />#}
+{#                                                                        <h3>Watches</h3>#}
+{#                                                                    </div>#}
+{#                                                                </a>#}
+{#                                                            </li>#}
+{##}
+{#                                                            <li class="">#}
+{#                                                                <a href="#category_ajax_64" data-toggle="tab" data-catid="64" data-catload="ajax" data-number="10" data-orderby="ID" data-lg="4" data-md="4" data-sm="3" data-xs="1" data-mobile="1" data-speed="1000" data-scroll="1" data-interval="5000" data-autoplay="false">#}
+{#                                                                    <div class="item-image">#}
+{#                                                                        <img width="70" height="30" src="{% static 'images/10.png' %}" class="attachment-350x230 size-350x230" alt="10" />#}
+{#                                                                        <h3>Women</h3>#}
+{#                                                                    </div>#}
+{#                                                                </a>#}
+{#                                                            </li>#}
+{#                                                        </ul>#}
+{#                                                    </div>#}
+{##}
+{#                                                    <div class="tab-content">#}
+{#                                                        <div id="category_ajax_60" class="tab-pane fade in"></div>#}
+{#                                                        <div id="category_ajax_58" class="tab-pane fade in"></div>#}
+{#                                                        <div id="category_ajax_65" class="tab-pane fade in active"></div>#}
+{#                                                        <div id="category_ajax_62" class="tab-pane fade in"></div>#}
+{#                                                        <div id="category_ajax_59" class="tab-pane fade in"></div>#}
+{#                                                        <div id="category_ajax_67" class="tab-pane fade in"></div>#}
+{#                                                        <div id="category_ajax_61" class="tab-pane fade in"></div>#}
+{#                                                        <div id="category_ajax_63" class="tab-pane fade in"></div>#}
+{#                                                        <div id="category_ajax_66" class="tab-pane fade in"></div>#}
+{#                                                        <div id="category_ajax_64" class="tab-pane fade in"></div>#}
+{#                                                    </div>#}
+{#                                                </div>#}
+{#                                                <!-- END TOP SELLING -->#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
                             </div>
                         </div>
                     </div>

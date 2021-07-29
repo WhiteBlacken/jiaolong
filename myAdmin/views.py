@@ -67,10 +67,32 @@ def delete_supplier(request, id):
     return redirect('show_supply_table')
 
 
-# 2.3 编辑指定id供应商信息页面
+# 2.3 去编辑指定id供应商信息页面
 def go_edit_supplier(request, id):
-    pass
+    context = {}
+    supplier = Supplier.objects.get(id=id)
+    context['supplier'] = supplier
+    # 切割并展示关键词
+    keywordCollection = supplier.keywords_collected
+    keyList = keywordCollection.split(",")
+    supplier.keyList = keyList
+    return render(request, 'myAdmin/go_edit_supply.html', {'context': context})
 
+# 2.4 对供应商进行更新
+def update_supplier(request):
+    # 分页展示
+    suppliers = Supplier.objects.all()
+    context = get_commom_page(request, suppliers)
+
+    supplier = Supplier.objects.get(id=request.POST.get('id'))
+    keyList = request.POST.getlist('keywordpicker','')
+    keyListStr = ''
+    for p in keyList:
+        keyListStr = keyListStr + p +','
+    supplier.keywords_collected = keyListStr[:-1]
+    print("")
+    supplier.save()
+    return render(request, 'myAdmin/supply_list.html', {'context': context})
 
 # 3. 关键词操作（主关键词）
 # 3.1 分页展示关键词列表
@@ -339,3 +361,5 @@ def unsave_keyword_cn(request):
 # 英
 def unsave_keyword_en(request):
     return redirect('show_keyword_similar_en_table')
+
+

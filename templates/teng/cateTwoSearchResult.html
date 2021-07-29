@@ -1,7 +1,8 @@
 {% extends 'teng/base_search_result.html' %}
 {% block navtitle %}
-    <li class="">
-        <span>{{ context.nowBusiness.name_cn }}</span>
+     <li>
+        <a id="shop" href="{% url 'suppliers_with_business' context.nowBusiness.id %}">{{ context.nowBusiness.name_cn }}</a>
+        <span class="go-page"></span>
     </li>
      <li class="active">
         <span>{{ context.nowSubbusiness.name_cn }}</span>

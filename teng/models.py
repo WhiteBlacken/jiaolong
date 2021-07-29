@@ -138,8 +138,9 @@ class Keyword_website_turkey(models.Model):
 
 # Chinese models here.
 class Supplier(models.Model):
-    name_cn = models.CharField(max_length=200, unique=True)
-    name_en = models.CharField(max_length=200, unique=True, default=None, blank=True)
+    name_cn = models.CharField(max_length=300, unique=True)
+    name_en = models.CharField(max_length=300, unique=True, default=None, blank=True)
+    name_tr = models.CharField(max_length=300, unique=True, default=None, blank=True)
     credit = models.DecimalField(max_digits=3, decimal_places=2, default=7.00)
     status = models.SmallIntegerField(default=0)
     country = models.ForeignKey(Country, on_delete=models.CASCADE, default=2)
@@ -159,6 +160,9 @@ class Supplier(models.Model):
     categories = models.ManyToManyField("Subbusiness")
     comment = models.CharField(max_length=600, null=True, default="test data")
     visited_times = models.IntegerField(default=0)
+    keywords_collected = models.CharField(max_length=3000)
+
+    # test = models.CharField(max_length=90)
 
     def __str__(self):
         return self.name_cn

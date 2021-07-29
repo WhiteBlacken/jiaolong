@@ -1,0 +1,209 @@
+{% extends 'myAdmin/base.html' %}
+{% block main %}
+<div class="tpl-portlet-components">
+    <div class="portlet-title">
+        <div class="caption font-green bold">
+            <span class="am-icon-code"></span> 供应商-网址及关键字审查
+        </div>
+
+    </div>
+    <div class="tpl-block">
+       <form class="form-horizontal" role="form" method="post" action="{% url 'update_supplier' %}">
+       {% csrf_token %}
+            <input name="id" value="{{ context.supplier.id }}" type="hidden"/>
+          <div class="form-group">
+            <label for="firstname" class="col-sm-2 control-label">中文名</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="name_cn" value="{{ context.supplier.name_cn }}" placeholder="请输入中文关键词">
+            </div>
+          </div>
+
+{#           <div class="form-group">#}
+{#            <label for="firstname" class="col-sm-2 control-label">英文名</label>#}
+{#            <div class="col-sm-10">#}
+{#              <input type="text" class="form-control" name="name_en" value="{{ context.supplier.name_en }}"placeholder="请输入英文关键词">#}
+{#            </div>#}
+{#          </div>#}
+{##}
+{#           <div class="form-group">#}
+{#            <label for="firstname" class="col-sm-2 control-label">信誉</label>#}
+{#            <div class="col-sm-10">#}
+{#              <input type="text" class="form-control" name="credit" value="{{ context.supplier.credit }}" placeholder="状态">#}
+{#            </div>#}
+{#          </div>#}
+{##}
+{#           <div class="form-group">#}
+{#            <label for="firstname" class="col-sm-2 control-label">状态</label>#}
+{#            <div class="col-sm-10">#}
+{#              <input type="text" class="form-control" name="status" value="{{ context.supplier.status }}" placeholder="同义词集合">#}
+{#            </div>#}
+{#          </div>#}
+{##}
+          <div class="form-group">
+            <label for="lastname" class="col-sm-2 control-label">网址</label>
+            <div class="col-sm-6">
+                <a href="{{ context.supplier.website }}" target="_blank"><span style="background-color: #D3D3D3" type="text" class="form-control" name="website" >{{context.supplier.website}}</span></a>
+            </div>
+            <div class="col-sm-4">
+                <!-- 水平 -->
+                <div class="row">
+                        <div class="radio-inline">
+                            <label for=""><input type="radio" name="isWebRight" id="">网页正常</label>
+                        </div>
+                        <div class="radio-inline">
+                            <label for=""><input type="radio" name="isWebRight" id="">网页故障</label>
+                        </div>
+                </div>
+            </div>
+          </div>
+{##}
+{#            <div class="form-group">#}
+{#            <label for="firstname" class="col-sm-2 control-label">规模</label>#}
+{#            <div class="col-sm-10">#}
+{#              <input type="text" class="form-control" name="scale" value="{{ context.supplier.scale }}" placeholder="同义词集合">#}
+{#            </div>#}
+{#          </div>#}
+{##}
+{#            <div class="form-group">#}
+{#            <label for="firstname" class="col-sm-2 control-label">成立年份</label>#}
+{#            <div class="col-sm-10">#}
+{#              <input type="text" class="form-control" name="built_year" value="{{ context.supplier.built_year }}" placeholder="同义词集合">#}
+{#            </div>#}
+{#          </div>#}
+{##}
+{#         <div class="form-group">#}
+{#            <label for="firstname" class="col-sm-2 control-label">地址（中文）</label>#}
+{#            <div class="col-sm-10">#}
+{#              <input type="text" class="form-control" name="address_cn" value="{{ context.supplier.address_cn }}" placeholder="同义词集合">#}
+{#            </div>#}
+{#          </div>#}
+{##}
+{#            <div class="form-group">#}
+{#            <label for="firstname" class="col-sm-2 control-label">地址（英文）</label>#}
+{#            <div class="col-sm-10">#}
+{#              <input type="text" class="form-control" name="address_en" value="{{ context.supplier.address_en }}" placeholder="同义词集合">#}
+{#            </div>#}
+{#          </div>#}
+{##}
+{#            <div class="form-group">#}
+{#            <label for="firstname" class="col-sm-2 control-label">邮箱</label>#}
+{#            <div class="col-sm-10">#}
+{#              <input type="text" class="form-control" name="email" value="{{ context.supplier.email }}" placeholder="同义词集合">#}
+{#            </div>#}
+{#          </div>#}
+{##}
+{#       <div class="form-group">#}
+{#            <label for="firstname" class="col-sm-2 control-label">座机</label>#}
+{#            <div class="col-sm-10">#}
+{#              <input type="text" class="form-control" name="office_phone" value="{{ context.supplier.office_phone }}" placeholder="同义词集合">#}
+{#            </div>#}
+{#          </div>#}
+{##}
+{#       <div class="form-group">#}
+{#            <label for="firstname" class="col-sm-2 control-label">手机号</label>#}
+{#            <div class="col-sm-10">#}
+{#              <input type="text" class="form-control" name="cell_phone" value="{{ context.supplier.cell_phone }}" placeholder="同义词集合">#}
+{#            </div>#}
+{#          </div>#}
+{##}
+{#        <div class="form-group">#}
+{#            <label for="firstname" class="col-sm-2 control-label">介绍（中文）</label>#}
+{#            <div class="col-sm-10">#}
+{#              <input type="text" class="form-control" name="description_cn" value="{{ context.supplier.description_cn }}" placeholder="同义词集合">#}
+{#            </div>#}
+{#          </div>#}
+{##}
+{#       <div class="form-group">#}
+{#            <label for="firstname" class="col-sm-2 control-label">介绍（英文）</label>#}
+{#            <div class="col-sm-10">#}
+{#              <input type="text" class="form-control" name="description_en" value="{{ context.supplier.description_en }}" placeholder="同义词集合">#}
+{#            </div>#}
+{#          </div>#}
+
+
+
+        <!--国家和产品和分类和评论和访问次数暂时不可以更改-->
+
+{#        <div class="form-group">#}
+{#            <label for="firstname" class="col-sm-2 control-label">分类</label>#}
+{#               <div class="col-sm-2">#}
+{#                  <select name="subbus" class="form-control">#}
+{#                      {% for cate in context.allCate %}#}
+{#                          {% if cate == context.keyword.subbusiness %}#}
+{#                            <option value ="{{ cate.id }}" selected="selected">{{ cate }}</option>#}
+{#                          {% else %}#}
+{#                            <option value ="{{ cate.id }}">{{ cate }}</option>#}
+{#                          {% endif %}#}
+{#                        {% endfor %}#}
+{#                  </select>#}
+{#                </div>#}
+{#          </div>#}
+
+
+{#            <div class="form-group">#}
+{#            <label for="firstname" class="col-sm-2 control-label">评论</label>#}
+{#            <div class="col-sm-10">#}
+{#              <input type="text" class="form-control" name="similar_set" value="{{ context.supplier.similar_set }}" placeholder="同义词集合">#}
+{#            </div>#}
+{#          </div>#}
+
+{#        <div class="form-group">#}
+{#            <label for="firstname" class="col-sm-2 control-label">访问次数</label>#}
+{#            <div class="col-sm-10">#}
+{#              <input type="text" class="form-control" name="similar_set" value="{{ context.keyword.similar_set }}" placeholder="同义词集合">#}
+{#            </div>#}
+{#          </div>#}
+
+{#       <div class="form-group">#}
+{#            <label for="firstname" class="col-sm-2 control-label">关键词列表</label>#}
+{#            <div class="col-sm-10">#}
+{#              <input type="text" class="form-control" name="similar_set" value="{{ context.supplier.keywords_collected }}" placeholder="同义词集合">#}
+{#            </div>#}
+{#       </div>#}
+        <div class="form-group">
+            <label for="firstname" class="col-sm-2 control-label">关键词列表</label>
+            <div class="col-sm-10">
+               <select class="selectpicker" name="keywordpicker" title="请筛选关键词" multiple data-live-search="true" data-actions-box="true" data-width="600px">
+
+                    {% for keyList in context.supplier.keyList %}
+                        <option value="{{ keyList }}">{{ keyList }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+       </div>
+
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default">提交</button>
+            <a href="{% url 'unsave_keyword' %}"  class="btn btn-default">放弃</a>
+        </div>
+      </div>
+
+    </form>
+    <div>
+        <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br> <br>
+     <br>
+     <br> <br>
+     <br>
+     <br>
+     <br> <br> <br>
+    </div>
+
+
+
+
+    </div>
+{#    <div class="tpl-alert"></div>#}
+</div>
+{% endblock %}

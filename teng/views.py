@@ -28,7 +28,6 @@ def findSupplierTopNCate(num):
                 maxc = bus.count
                 tmp = bus
         tmp.count = 0
-        print(tmp, maxc)
         topN.append(tmp)
     return topN
 
@@ -36,12 +35,8 @@ def findSupplierTopNCate(num):
 # 取供应商被搜索最多的二级分类,#并查找对应的最高访问供应商
 def findSupplierSearchTopNSubCate(nums):
     cnt = Subbusiness.objects.all().count()
-    print("sub数量：")
-    print(cnt)
     if cnt < nums:
         nums = cnt
-    print("num数量:")
-    print(nums)
     subbusiness = Subbusiness.objects.all()
     for sub in subbusiness:
         sub.count = 0
@@ -60,12 +55,8 @@ def findSupplierSearchTopNSubCate(nums):
         if tmp.count == 0:
             break
         tmp.count = 0
-        print("nowLocal:")
-        print(tmp, maxc)
         tmp.num = num
         num = num + 1
-        print("num:")
-        print(num)
         supply_set = tmp.supplier_set.order_by('-visited_times')
         # 要考虑是否有超过3个
         tmp.top_supply_list = []
@@ -212,16 +203,12 @@ def index(request):
     # 取访问量最高的5个供应商
     topNVisitSupplier = findVisitTopNSupplier(5)
     context['topNVisitSupplier'] = topNVisitSupplier
-    print("topNVisitSupplier.num:")
-    print(topNVisitSupplier[1].num)
     # 取信誉最好的4个供应商
     topNCreditSupplier = findCreditTopNSupplier(4)
     context['topNCreditSupplier'] = topNCreditSupplier
     # 取成立时间最久的3个供应商
     topNCreateDateSupplier = findCreateDateTopNSupplier(3)
     context['topNCreateDateSupplier'] = topNCreateDateSupplier
-    print("topNCreateDateSupplier:")
-    print(topNCreateDateSupplier)
     # 填充热门推荐栏，需要热门（二级）8个，以及对应热门供应商3个
     supplierSearchTopNSubCate = findSupplierSearchTopNSubCate(8)
     context['supplierSearchTopNSubCate'] = supplierSearchTopNSubCate
@@ -367,3 +354,82 @@ def testFinished(request):
         return HttpResponse("chinese_word:" + chinese_word + " status:" + status + " subbuiness:" + subbuiness)
 
     # return HttpResponse("chinese_word:"+chinese_word+" status:"+status+" subbuiness:"+subbuiness)
+
+
+def show_supply_detail(request,id):
+    context = getCommomCate()
+    # 填充热门推荐栏，需要热门（二级）8个，以及对应热门供应商3个
+    supplierSearchTopNSubCate = findSupplierSearchTopNSubCate(8)
+    context['supplierSearchTopNSubCate'] = supplierSearchTopNSubCate
+    # 查询指定供应商的信息,所属子分类，所属一级分类,切割并展示关键词
+    nowSupply = Supplier.objects.get(id=id)
+    # 切割并展示关键词
+    keywordCollection = nowSupply.keywords_collected
+    keyList = keywordCollection.split(",")
+    nowSupply.keyList = keyList
+    context['nowSupply'] = nowSupply
+    # 如果没有对应的行业分类会报错，这里要注意
+    nowSubbusiness = Subbusiness.objects.get(supplier=nowSupply)
+    context['nowSubbusiness'] = nowSubbusiness
+    nowBusiness = Business.objects.get(id=nowSubbusiness.parent_id)
+    context['nowBusiness'] = nowBusiness
+    # 用户访问即增加 该供应商的visited_times字段（只有登录用户访问有效，一段时间内多次访问只记录一次）
+    username = request.session.get('username', '')
+    if username:
+        nowvisitTimes = request.session.get("nowvisit'%d'"%id)
+        if nowvisitTimes:
+            context['nowVisitTimes'] = nowvisitTimes
+        else:
+            nowSupply.visited_times = nowSupply.visited_times+1
+            request.session["nowvisit'%d'"%id] = nowSupply.visited_times
+            context['nowVisitTimes'] = nowSupply.visited_times
+            nowSupply.save()
+    # 推荐相关的供应商
+    # 怎么个相关法（1. 对应相同关键词的 2. 用户经常捆绑式访问的 3. 同一类别下的 ）
+    # 此处暂时先推荐同一类别（二级分类）下的（要把自己排除掉）
+    supplierNum = nowSubbusiness.supplier_set.count()
+    recommandNum = 4
+    if recommandNum>supplierNum:
+        recommandNum = supplierNum
+    recommandSuppliers = nowSubbusiness.supplier_set.all()[0:recommandNum]
+    context['recommandSuppliers'] = recommandSuppliers
+    return render(request,'teng/supply_detail.html',{'context':context})
+
+def search_by_keyword1(request,searchText):
+    context = getCommomCate()
+    # 拿到post中提交的分类值和关键词
+    page = request.GET.get('page', 1)
+    print('searchText is ' + searchText)
+    context['searchText'] = searchText
+    # 通过关键词去查找内容（通过分类值进行限制） 要修改，仅作为test
+    # get返回值的数量只能为1，为空或者>=2都会报错
+    keyword = Keyword.objects.filter(chinese_keyword=searchText)
+    # pro:怎么判断keyword（集合）是否为空
+    paginator = []
+    page_data = []
+    # 这边要再改掉，能和前面进行复合
+    if keyword:
+        suppliers = Supplier.objects.filter(categories=keyword[0].subbusiness).order_by('id')
+        # 分页
+        # 会员非会员能看到的数据不一样 test：会员：全部  非会员：2条
+
+        userLevel = judgeUserLevel(request)
+        if userLevel == 0:
+            return HttpResponse('请先登录')
+        if userLevel == 2:
+            paginator = Paginator(suppliers, 4)
+            page_data = paginator.page(page)
+        else:
+            paginator = Paginator(suppliers[:2], 4)
+            page_data = paginator.page(page)
+    # 前三条测试后看是否要删掉
+    # context['keyword'] = keyword
+    # context['searchText'] = searchText
+    # context['businessId'] = businessId
+    context['paginator'] = paginator
+    context['page_data'] = page_data
+    # 填充热门推荐栏，需要热门（二级）8个，以及对应热门供应商3个
+    supplierSearchTopNSubCate = findSupplierSearchTopNSubCate(8)
+    context['supplierSearchTopNSubCate'] = supplierSearchTopNSubCate
+    return render(request, 'teng/keywordSearchResult.html',
+                  {'context': context})

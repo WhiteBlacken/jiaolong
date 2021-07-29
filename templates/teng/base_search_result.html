@@ -147,12 +147,12 @@
                             <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                                 <div class="products-entry clearfix">
                                     <div class="products-thumb">
-                                        <a href="home_style_1_shop_product_default.html" class="woocommerce-LoopProduct-link">
+                                        <a href="{% url 'show_supply_detail' supply.id %}" class="woocommerce-LoopProduct-link">
                                             <!--左上角标设置-->
 {#                                            <span class="onsale">信息完整</span>#}
                                         </a>
 
-                                        <a href="home_style_1_shop_product_default.html">
+                                        <a href="{% url 'show_supply_detail' supply.id %}">
                                             <div class="product-thumb-hover">
                                                 <img 	width="300" height="300" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt=""
                                                         src="{% static 'images/micro.png' %}"
@@ -168,7 +168,7 @@
                                     <div class="products-content">
                                         <div class="item-content">
                                             <h4>
-                                                <a href="home_style_1_shop_product_default.html" title="{{ supply.name_cn }}">
+                                                <a href="{% url 'show_supply_detail' supply.id %}" title="{{ supply.name_cn }}">
                                                     {{ supply.name_cn}} </a>
                                             </h4>
 

@@ -201,8 +201,8 @@
 						<div class="row">
 							<!-- LOGO -->
 							<div class="col-lg-3 col-md-2 col-sm-12 col-xs-12 logo-wrapper">
-								<a href="home_style_1.html">
-									<img src="{% static 'images/logo-blue.png' %}" alt="sw shoppy" width="140" height="57"/>
+								<a href="{% url 'index' %}">
+									<img src="{% static 'images/header-icon.png' %}" alt="sw shoppy" width="60" height="60"/>
 								</a>
 							</div>
 							<!-- END LOGO -->
@@ -214,12 +214,12 @@
 											<div class="navbar-inner navbar-inverse">
 												<div class="resmenu-container">
 													<!-- LIST MOBILE MENU ITEMS -->
-													<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#ResMenuprimary_menu">
-														<span class="sr-only">Categories</span>
-														<span class="icon-bar"></span>
-														<span class="icon-bar"></span>
-														<span class="icon-bar"></span>
-													</button>
+{#													<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#ResMenuprimary_menu">#}
+{#														<span class="sr-only">Categories</span>#}
+{#														<span class="icon-bar"></span>#}
+{#														<span class="icon-bar"></span>#}
+{#														<span class="icon-bar"></span>#}
+{#													</button>#}
 													
 													<div id="ResMenuprimary_menu" class="collapse menu-responsive-wrapper">
 														<ul id="menu-primary-menu" class="flytheme_resmenu">
@@ -650,7 +650,7 @@
 																						<div class="item-detail">
 																							<div class="item-img products-thumb">
 {#																								<span class="onsale">Sale!</span>#}
-																								<a href="home_style_1_shop_product_default.html">
+																								<a href="{% url 'show_supply_detail' supply.id %}">
 																									<div class="product-thumb-hover">
 																										<img 	width="300" height="300" src="{% static 'images/12-300x300.jpg' %}" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="12"
 																												src="{% static 'images/12-300x300.jpg' %}"
@@ -666,7 +666,7 @@
 																								</div>
 
 																								<h4>
-																									<a href="home_style_1_shop_product_default.html" title="Dolore turkey">{{ supply.name_cn }}</a>
+																									<a href="{% url 'show_supply_detail' supply.id %}" title="Dolore turkey">{{ supply.name_cn }}</a>
 																								</h4>
 
 																								<div class="item-price">
